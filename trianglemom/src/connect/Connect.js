@@ -1,12 +1,16 @@
+import './Connect.css'
+
 function Header() {
     return (
-        <h1>Connect With Us</h1>
+        <div id="header">
+            <h1>Connect With Us</h1>
+        </div>
     );
 }
 
 function TypeOfContact() {
     return (
-        <div>
+        <div id="toc-container">
             <button>Email</button>
             <button>Phone</button>
         </div>
@@ -15,7 +19,9 @@ function TypeOfContact() {
 
 function EmailForm() {
     return (
-        <div>Input Email...</div>
+        <div class='contact-container' id='email-form-container'>
+            <input type="text"/>
+        </div>
     );
 }
 
@@ -27,28 +33,33 @@ function PhoneForm() {
 
 function SubjectForm() {
     return (
-        <div>Subject...</div>
+        <div id='subject-form-container'>
+            <input type="text"/>
+        </div>
     );
 }
 
 function MessageBodyForm() {
     return (
-        <div>Message Body...</div>
+        <div id='message-form-container'>
+            <textarea></textarea>
+        </div>
     );
 }
 
 function SendButton() {
     return (
-        <button>Send</button>
+        <div id="send-container">
+            <button>Send</button>
+        </div>
     );
 }
 
 function InputForm() {
     return (
-        <div>
+        <div id='input-container'>
             <TypeOfContact/>
             <EmailForm/>
-            <PhoneForm/>
             <SubjectForm/>
             <MessageBodyForm/>
             <SendButton/>
@@ -58,10 +69,10 @@ function InputForm() {
 
 function Connect() {
     return (
-        <>
+        <div id='connect-container'>
             <Header/>
             <InputForm/>
-        </>
+        </div>
     );
 }
 

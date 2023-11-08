@@ -7,7 +7,9 @@ function App() {
   return (
     <div id="body">
       <SideBar/>
-      <Connect/>
+      <div id="content-container">
+        <Connect/>
+      </div>
       <ImportBootStrap />
     </div>
   );
