@@ -37,6 +37,7 @@
 #toc-container > button {
     width: 45%;
     height: 70%;
+    transition: width 2s;
 }
 
 .contact-container {

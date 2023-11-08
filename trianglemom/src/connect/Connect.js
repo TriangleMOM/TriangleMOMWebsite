@@ -1,4 +1,5 @@
 import './Connect.css'
+import React, { useState } from 'react';
 
 function Header() {
     return (
@@ -9,10 +10,26 @@ function Header() {
 }
 
 function TypeOfContact() {
+    const [hovered, setHovered] = useState(0);
+
+
+    const buttonStyle = (buttonNumber) => ({
+        width: hovered === 0 ? '45%' : hovered === buttonNumber ? '70%' : '20%',
+    });
+
+
     return (
         <div id="toc-container">
-            <button>Email</button>
-            <button>Phone</button>
+            <button
+                style={buttonStyle(1)}
+                onMouseEnter={() => setHovered(1)}
+                onMouseLeave={() => setHovered(0)}
+            >Email</button>
+            <button
+                style={buttonStyle(2)}
+                onMouseEnter={() => setHovered(2)}
+                onMouseLeave={() => setHovered(0)}
+            >Phone</button>
         </div>
     );
 }
