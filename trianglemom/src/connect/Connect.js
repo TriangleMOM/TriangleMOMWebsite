@@ -9,49 +9,64 @@ function Header() {
     );
 }
 
-function TypeOfContact() {
-    const [hovered, setHovered] = useState(0);
+function TypeOfContact({ onTypeContactClick, toc }) {
+    const [hovered, setHovered] = useState('none');
 
-
-    const buttonStyle = (buttonNumber) => ({
-        width: hovered === 0 ? '45%' : hovered === buttonNumber ? '70%' : '20%',
-    });
+    const buttonWidth = (button) => {
+        let width = "45%";
+        if(toc === button || (hovered === button && toc === 'none')) width = "70%";
+        else if(toc !== 'none' || hovered !== 'none') width = '20%';
+        
+        return {
+            width: width
+        };
+    };
 
 
     return (
         <div id="toc-container">
             <button
-                style={buttonStyle(1)}
-                onMouseEnter={() => setHovered(1)}
-                onMouseLeave={() => setHovered(0)}
+                style={buttonWidth('email')}
+                onMouseEnter={() => setHovered('email')}
+                onMouseLeave={() => setHovered('none')}
+                onClick={() => onTypeContactClick('email')}
+                class="modern-button"
             >Email</button>
             <button
-                style={buttonStyle(2)}
-                onMouseEnter={() => setHovered(2)}
-                onMouseLeave={() => setHovered(0)}
+                style={buttonWidth('phone')}
+                onMouseEnter={() => setHovered('phone')}
+                onMouseLeave={() => setHovered('none')}
+                onClick={() => onTypeContactClick('phone')}
+                class="modern-button"
             >Phone</button>
         </div>
     );
 }
 
-function EmailForm() {
+function EmailForm({ toc }) {
+    if(toc !== 'email') return (<></>);
+    
     return (
         <div class='contact-container' id='email-form-container'>
-            <input type="text"/>
+            <input type="text" class="singleline-input"/>
         </div>
     );
 }
 
-function PhoneForm() {
+function PhoneForm({ toc }) {
+    if(toc !== 'phone') return (<></>);
+
     return (
-        <div>Phone Number...</div>
+        <div class='contact-container' id='phone-form-container'>
+            <input type="text" class="singleline-input"/>
+        </div>
     );
 }
 
 function SubjectForm() {
     return (
         <div id='subject-form-container'>
-            <input type="text"/>
+            <input type="text" class="singleline-input"/>
         </div>
     );
 }
@@ -65,18 +80,36 @@ function MessageBodyForm() {
 }
 
 function SendButton() {
+    const [hovered, setHovered] = useState(0);
+    
+    const buttonWidth = () => ({
+        width: hovered === 1 ? '100%' : '40%'
+    });
+
     return (
         <div id="send-container">
-            <button>Send</button>
+            <button class="modern-button"
+            onMouseEnter={() => setHovered(1)}
+            onMouseLeave={() => setHovered(0)}
+            style={buttonWidth()}>Send</button>
         </div>
     );
 }
 
 function InputForm() {
+    const [typeContact, setTypeContact] = useState('none');
+
+    const handleTypeContactChange = (type) => {
+        setTypeContact(type);
+    };
+
     return (
         <div id='input-container'>
-            <TypeOfContact/>
-            <EmailForm/>
+            <TypeOfContact 
+                onTypeContactClick={handleTypeContactChange}
+                toc={typeContact}/>
+            <EmailForm toc={typeContact}/>
+            <PhoneForm toc={typeContact}/>
             <SubjectForm/>
             <MessageBodyForm/>
             <SendButton/>

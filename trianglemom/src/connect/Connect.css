@@ -13,6 +13,7 @@
 
 #header > h1 {
     font-size: 4vw;
+    color: var(--old-rose);
 }
 
 #input-container {
@@ -37,7 +38,7 @@
 #toc-container > button {
     width: 45%;
     height: 70%;
-    transition: width 2s;
+    transition: width 1s;
 }
 
 .contact-container {
@@ -45,7 +46,7 @@
     align-items: center;
 }
 
-#email-form-container > input {
+.contact-container > input {
     width: 100%;
     height: 50%;
 }
@@ -85,4 +86,34 @@
 #send-container > button {
     width: 40%;
     height: 70%;
+    transition: width 1s;
+}
+
+.singleline-input {
+    border: none;
+    border-bottom: 5px solid var(--old-rose);
+    font-size: 1.75vw;
+    color: var(--old-rose);
+}
+
+.singleline-input:focus {
+    outline: 0;
+}
+
+.modern-button {
+    background-color: var(--old-rose);
+    color: white;
+    border: none;
+    font-size: 1.75vw;
+}
+
+#message-form-container > textarea {
+    resize: none;
+    color: var(--old-rose);
+    border: 3px solid var(--old-rose);
+    font-size: 1.2vw;
+}
+
+#message-form-container > textarea:focus {
+    outline: none
 }
