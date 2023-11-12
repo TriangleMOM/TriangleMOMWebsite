@@ -1,7 +1,9 @@
 #sidebar-container {
+    position: fixed;
     background-color: var(--old-rose);
     width: 40%;
     color: white;
+    height: 100%;
 }
 
 #sidebar-header {

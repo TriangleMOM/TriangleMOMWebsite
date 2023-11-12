@@ -1,3 +1,7 @@
 # Virtual environment
 env
 __pycache__
+
+# React
+trianglemom/package-lock.json
+trianglemom/package.json
