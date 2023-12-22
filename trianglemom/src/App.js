@@ -1,9 +1,11 @@
-import SideBar from './sidebar/Sidebar.js'
-import ImportBootStrap from './Bootstrap.js';
+import SideBar from './components/sidebar/Sidebar.js'
+import ImportBootStrap from './components/Bootstrap.js';
 import './App.css'
-import Connect from './connect/Connect.js';
-import Gallery from './gallery/Gallery.js';
-import Eboard from './eboard/Eboard.js';
+import Connect from './pages/connect/Connect.js';
+import Gallery from './pages/gallery/Gallery.js';
+import Eboard from './pages/eboard/Eboard.js';
+import Home from './pages/home/Home.js'
+import Events from './pages/events/Events.js';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       <div id="content-container">
         {/* <Gallery/> */}
         {/* <Connect/> */}
-        <Eboard/>
+        {/* <Eboard/> */}
+        {/* <Home/> */}
+        <Events/>
       </div>
       <ImportBootStrap />
     </div>

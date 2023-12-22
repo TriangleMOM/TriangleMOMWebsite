@@ -5,19 +5,6 @@
     padding-right: 2%;
 }
 
-#header {
-    height: 20%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#header > h1 {
-    font-size: 4vw;
-    color: var(--old-rose);
-}
-
 #gallery-image-container {
     column-count: 3;
     column-gap: 10px;

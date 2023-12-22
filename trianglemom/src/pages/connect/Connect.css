@@ -3,19 +3,6 @@
     height: 100%;
 }
 
-#header {
-    height: 20%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#header > h1 {
-    font-size: 4vw;
-    color: var(--old-rose);
-}
-
 #input-container {
     height: 80%;
     margin: 0;

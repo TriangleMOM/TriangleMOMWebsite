@@ -1,0 +1,45 @@
+#event-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#event-scroll-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+
+.event-card {
+    margin: 20px;
+    width: 60%;
+}
+
+div.event-date {
+    background-color: var(--old-rose);
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.event-details {
+
+}
+
+.event-title {
+    color: var(--old-rose);
+}
+
+.event-time {
+    font-style: italic;
+}
+
+.event-location {
+    font-style: italic;
+}
+
+.event-type {}

@@ -1,0 +1,22 @@
+{
+    "paragraphs": [
+        {
+            "includeHeader": "true",
+            "header": "Who we are?",
+            "body": "At Triangle, we pride ourselves on being a close-knit, smaller fraternity that operates much like a family. We understand that the typical frat life isn't for everyone, and that's why we've cultivated a unique space for those who might describe themselves as more nerdy or socially anxious. Our fraternity is a welcoming community where like-minded individuals connect, grow, and thrive, embracing the more intellectual and unique aspects of life. Along with current members, we maintain a strong, active network with our alumni, enriching our fraternity experience."
+        },
+        {
+            "includeHeader": "false",
+            "body": "You'll find fellow nerds here who value deep conversations and shared niche hobbies, offering a sense of belonging and understanding. We're about more than just parties; we focus on building lasting friendships and a supportive, inclusive community where every member, past and present, feels valued."
+        },
+        {
+            "includeHeader": "true",
+            "header": "Our House?",
+            "body": "Our fraternity house, conveniently located on campus, offers more than just a place to stay; it's a home steeped in history and character. Unique among fraternity living options, our house is an actual house, not a dorm-style building, and it underwent a complete renovation in the summer of 2023 to enhance its comfort and appeal. Each room has its own history and personality, echoing the legacy of the brothers who lived here before."
+        },
+        {
+            "includeHeader": "false",
+            "body": "An added benefit of our on-campus location is that freshmen can move in during their first year, allowing them to immediately immerse themselves in our close-knit community. Additionally, we offer an in-house meal plan, providing nutritious, delicious meals right where you live. This combination of modern amenities, rich history, and a welcoming environment makes our fraternity house the ideal place for making lasting college memories."
+        }
+    ]
+}

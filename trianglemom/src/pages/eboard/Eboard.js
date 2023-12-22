@@ -1,12 +1,5 @@
 import './Eboard.css'
-
-function Header() {
-    return (
-        <div id="header">
-            <h1>Meet Our Executive Board</h1>
-        </div>
-    );
-}
+import Header from './../../components/header/Header.js';
 
 function Profile() {
     return (
@@ -17,7 +10,6 @@ function Profile() {
             <div class='profile-info'>
                 <h2>Jason Pittman</h2>
                 <h3>Recruitment Chair</h3>
-                {/* <p>I'm from Grain Valley, Missouri and I'm majoring in Computer Science & Mathematics.</p> */}
                 <p class='hometown'>My hometown is Grain Valley, Missouri</p>
                 <p class='major'>Majoring in Computer Science & Mathematics</p>
                 <p class='quote'>"I joined triangle to become part of a family where I'm dad"</p>
@@ -37,7 +29,7 @@ function Redbar() {
 function Eboard() {
     return (
         <div id="eboard-container">
-            <Header/>
+            <Header>Meet Our Executive Board</Header>
             <div id="profiles-container">
                 <Profile/>
                 <Redbar/>

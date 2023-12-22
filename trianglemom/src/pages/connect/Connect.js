@@ -1,13 +1,6 @@
 import './Connect.css'
 import React, { useState } from 'react';
-
-function Header() {
-    return (
-        <div id="header">
-            <h1>Connect With Us</h1>
-        </div>
-    );
-}
+import Header from './../../components/header/Header.js';
 
 function TypeOfContact({ onTypeContactClick, toc }) {
     const [hovered, setHovered] = useState('none');
@@ -120,7 +113,7 @@ function InputForm() {
 function Connect() {
     return (
         <div id='connect-container'>
-            <Header/>
+            <Header>Connect With Us</Header>
             <InputForm/>
         </div>
     );
