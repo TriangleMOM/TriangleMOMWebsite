@@ -70,3 +70,15 @@
 .sidebar-button:hover {
     background-color: var(--old-rose-shade);
 }
+
+.sidebar-button:focus {
+ outline: 0;
+}
+
+.sidebar-button-active {
+    background-color: var(--old-rose);
+}
+
+.sidebar-button-inactive {
+    background-color: var(--old-rose-shade);
+}

@@ -7,16 +7,24 @@ import Eboard from './pages/eboard/Eboard.js';
 import Home from './pages/home/Home.js'
 import Events from './pages/events/Events.js';
 
+import { useState } from 'react';
+
 function App() {
+  const [activePage, setActivePage] = useState("home")
+
+  const handleActivePageChange = (pageName) => {
+    setActivePage(pageName);
+  }
+
   return (
     <div id="body">
-      <SideBar/>
+      <SideBar activePage={activePage} handleActivePageChange={handleActivePageChange}/>
       <div id="content-container">
-        {/* <Gallery/> */}
-        {/* <Connect/> */}
-        {/* <Eboard/> */}
-        {/* <Home/> */}
-        <Events/>
+        {activePage === 'home' && <Home/>}
+        {activePage === 'connect' && <Connect/>}
+        {activePage === 'events' && <Events/>}
+        {activePage === 'eboard' && <Eboard/>}
+        {activePage === 'gallery' && <Gallery/>}
       </div>
       <ImportBootStrap />
     </div>

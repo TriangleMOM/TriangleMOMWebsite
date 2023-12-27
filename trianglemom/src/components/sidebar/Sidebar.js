@@ -1,11 +1,5 @@
 import './Sidebar.css'
 
-function SideBarButton(props) {
-    return (
-        <button class='sidebar-button'>{props.text}</button>
-    );
-}
-
 function SideBarHeader() {
     return (
         <div id="sidebar-header">
@@ -18,23 +12,24 @@ function SideBarHeader() {
     );
 }
 
-function SideBarButtonContainer() {
+function SideBarButtonContainer({ activePage, handleActivePageChange }) {
+    console.log(activePage);
     return (
         <div id="sidebar-button-container">
-            <SideBarButton text="Connect With Us"/>
-            <SideBarButton text="View Upcoming Events"/>
-            <SideBarButton text="Meet Our Executive Board"/>
-            <SideBarButton text="Explore The Gallery"/>
-            <SideBarButton text="Disover Our History"/>
+            <button class={`sidebar-button ${activePage==='home' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("home")}>Who We Are</button>
+            <button class={`sidebar-button ${activePage==='connect' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("connect")}>Connect With Us</button>
+            <button class={`sidebar-button ${activePage==='events' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("events")}>Upcoming Events</button>
+            <button class={`sidebar-button ${activePage==='eboard' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("eboard")}>Meet Our Executive Board</button>
+            <button class={`sidebar-button ${activePage==='gallery' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("gallery")}>Explore The Gallery</button>
         </div>
     );
 }
 
-function SideBar() {
+function SideBar({ activePage, handleActivePageChange }) {
     return (
         <div id="sidebar-container">
             <SideBarHeader/>
-            <SideBarButtonContainer/>
+            <SideBarButtonContainer activePage={activePage} handleActivePageChange={handleActivePageChange}/>
         </div>
     );
 }
