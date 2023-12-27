@@ -53,6 +53,22 @@
     height: 50%;
 }
 
+#name-form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name-form-container > input {
+    width: 45%;
+}
+
+#phone-form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 #message-form-container {
     grid-row-end: span 2;
     display: flex;
@@ -87,11 +103,25 @@
     outline: 0;
 }
 
+#pn-input {
+    width: 70%;
+    text-align: center;
+}
+
+#pcc-input {
+    width: 20%;
+    text-align: center;
+}
+
 .modern-button {
     background-color: var(--old-rose);
     color: white;
     border: none;
     font-size: 1.75vw;
+}
+
+.modern-button:focus {
+    outline: none;
 }
 
 #message-form-container > textarea {
@@ -103,4 +133,8 @@
 
 #message-form-container > textarea:focus {
     outline: none
+}
+
+button:focus {
+    outline: none;
 }

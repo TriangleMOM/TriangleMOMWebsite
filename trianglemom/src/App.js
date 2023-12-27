@@ -10,7 +10,7 @@ import Events from './pages/events/Events.js';
 import { useState } from 'react';
 
 function App() {
-  const [activePage, setActivePage] = useState("home")
+  const [activePage, setActivePage] = useState("connect")
 
   const handleActivePageChange = (pageName) => {
     setActivePage(pageName);
