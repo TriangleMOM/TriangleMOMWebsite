@@ -7,7 +7,16 @@
     padding-right: 10%;
 }
 
-.profile-container {
+@media (max-width: 1000px) {
+    #profiles-container {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+/* --- Profile --- */
+
+.profile {
     display: grid;
     grid-template-columns: 4fr 8fr;
     margin-bottom: 30px;
@@ -20,7 +29,7 @@
     align-items: center;
 }
 
-.profile-image > img {
+.profile-image>img {
     width: 8vw;
     border-radius: 100%;
 }
@@ -29,20 +38,54 @@
     grid-column-start: 2;
 }
 
-.profile-info > h2 {
+.profile-name {
     font-size: 2.3vw;
     font-weight: bold;
 }
 
-.profile-info > h3 {
+.profile-position {
     font-size: 1.5vw;
     font-style: italic;
     color: var(--old-rose);
 }
 
-.hometown {
+.profile-hometown {
     margin: 0;
 }
+
+@media (max-width: 1000px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-image {
+        /* background-color: red; */
+        margin-bottom: 3%;
+    }
+
+    .profile-image>img {
+        width: 20vw;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .profile-name {
+        font-size: 4vw;
+    }
+    
+    .profile-position {
+        font-size: 3vw;
+    }
+
+    .profile-info> p {
+        font-size: 2vw;
+    }
+}
+
+/* --- Red Horizontal Bar --- */
 
 .redbar-container {
     background-color: var(--old-rose);
@@ -52,3 +95,12 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+@media (max-width: 1000px) {
+    .redbar-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* --- END OF CSS FILE --- */
