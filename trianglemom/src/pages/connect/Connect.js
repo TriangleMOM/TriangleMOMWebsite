@@ -1,6 +1,7 @@
 import './Connect.css'
 import React, { useState } from 'react';
 import Header from './../../components/header/Header.js';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 function TypeOfContact({ onTypeContactClick, toc }) {
     const [hovered, setHovered] = useState('none');
@@ -17,21 +18,21 @@ function TypeOfContact({ onTypeContactClick, toc }) {
 
 
     return (
-        <div id="toc-container">
+        <div id="type-of-contact-form">
             <button
                 style={buttonWidth('email')}
                 onMouseEnter={() => setHovered('email')}
                 onMouseLeave={() => setHovered('none')}
                 onClick={() => onTypeContactClick('email')}
                 class="modern-button"
-            >Email</button>
+            ><FaEnvelope/></button>
             <button
                 style={buttonWidth('phone')}
                 onMouseEnter={() => setHovered('phone')}
                 onMouseLeave={() => setHovered('none')}
                 onClick={() => onTypeContactClick('phone')}
                 class="modern-button"
-            >Phone</button>
+            ><FaPhone/></button>
         </div>
     );
 }
@@ -40,8 +41,8 @@ function EmailForm({ toc }) {
     if(toc !== 'email') return (<></>);
     
     return (
-        <div class='contact-container' id='email-form-container'>
-            <input type="text" class="singleline-input"/>
+        <div class='contact-form' id='email-contact-form'>
+            <input type="text"/>
         </div>
     );
 }
@@ -97,43 +98,33 @@ function PhoneForm({ toc }) {
     }
 
     return (
-        <div class='contact-container' id='phone-form-container'>
+        <div class='contact-form' id='phone-contact-form'>
             <input 
                 type="text" 
-                class="singleline-input"
-                id="pcc-input"
+                id="phone-cc-input"
                 value={phoneCountryCode}
                 onChange={handlePhoneCountryCodeChange}/>
             <input 
                 type="text" 
-                class="singleline-input"
-                id="pn-input"
+                id="phone-number-input"
                 value={phoneNumber}
                 onChange={handlePhoneNumberChange}/>
         </div>
     );
 }
 
-function SubjectForm() {
-    return (
-        <div id='subject-form-container'>
-            <input type="text" class="singleline-input"/>
-        </div>
-    );
-}
-
 function NameForm() {
     return (
-        <div id="name-form-container">
-            <input type="text" class="singleline-input"/>
-            <input type="text" class="singleline-input"/>
+        <div id="name-form">
+            <input type="text"/>
+            <input type="text"/>
         </div>
     );
 }
 
 function MessageBodyForm() {
     return (
-        <div id='message-form-container'>
+        <div id='message-form'>
             <textarea></textarea>
         </div>
     );
@@ -147,7 +138,7 @@ function SendButton() {
     });
 
     return (
-        <div id="send-container">
+        <div id="send-button">
             <button class="modern-button"
             onMouseEnter={() => setHovered(1)}
             onMouseLeave={() => setHovered(0)}
@@ -164,7 +155,7 @@ function InputForm() {
     };
 
     return (
-        <div id='input-container'>
+        <div id='input-form'>
             <TypeOfContact 
                 onTypeContactClick={handleTypeContactChange}
                 toc={typeContact}/>
