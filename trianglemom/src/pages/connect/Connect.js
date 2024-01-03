@@ -42,7 +42,7 @@ function EmailForm({ toc }) {
     
     return (
         <div class='contact-form' id='email-contact-form'>
-            <input type="text"/>
+            <input type="text" placeholder='johndoe@email.com'/>
         </div>
     );
 }
@@ -108,6 +108,7 @@ function PhoneForm({ toc }) {
                 type="text" 
                 id="phone-number-input"
                 value={phoneNumber}
+                placeholder='(111) 222-3333'
                 onChange={handlePhoneNumberChange}/>
         </div>
     );
@@ -116,8 +117,8 @@ function PhoneForm({ toc }) {
 function NameForm() {
     return (
         <div id="name-form">
-            <input type="text"/>
-            <input type="text"/>
+            <input type="text" placeholder='First Name'/>
+            <input type="text" placeholder='Last Name'/>
         </div>
     );
 }
@@ -148,7 +149,7 @@ function SendButton() {
 }
 
 function InputForm() {
-    const [typeContact, setTypeContact] = useState('phone');
+    const [typeContact, setTypeContact] = useState('none');
 
     const handleTypeContactChange = (type) => {
         setTypeContact(type);

@@ -19,7 +19,7 @@
 input {
     border: none;
     border-bottom: 5px solid var(--old-rose);
-    font-size: 1.75vw;
+    font-size: 1.75vw !important;
     color: var(--old-rose);
 }
 
@@ -36,6 +36,12 @@ button {
 
 button:focus {
     outline: none;
+}
+
+@media (max-width: 1000px) {
+    input {
+        font-size: 5vw !important;
+    }
 }
 
 /* --- Type Of Contact Form --- */
@@ -116,6 +122,12 @@ button:focus {
 
 #message-form>textarea:focus {
     outline: none
+}
+
+@media (max-width: 1000px) {
+    #message-form>textarea {
+        font-size: 3vw;
+    }
 }
 
 /* --- Send Button --- */
