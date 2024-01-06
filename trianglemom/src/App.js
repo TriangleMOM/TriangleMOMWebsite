@@ -35,13 +35,13 @@ function App() {
 
   return (
     <div id="body">
-      {narrowLayout && <Navbar />}
+      {narrowLayout && <Navbar activePage={activePage} handleActivePageChange={handleActivePageChange} />}
       {!narrowLayout && <SideBar activePage={activePage} handleActivePageChange={handleActivePageChange} />}
       <div id="content-container">
-        {/* {activePage === 'home' && <Home/>} */}
-        {/* {activePage === 'connect' && <Connect/>} */}
-        {/* {activePage === 'events' && <Events/>} */}
-        {/* {activePage === 'eboard' && <Eboard/>} */}
+        {activePage === 'home' && <Home/>}
+        {activePage === 'connect' && <Connect/>}
+        {activePage === 'events' && <Events/>}
+        {activePage === 'eboard' && <Eboard/>}
         {activePage === 'album' && <Album/>}
       </div>
     </div>

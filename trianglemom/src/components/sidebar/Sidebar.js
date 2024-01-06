@@ -20,7 +20,7 @@ function SideBarButtonContainer({ activePage, handleActivePageChange }) {
             <button class={`sidebar-button ${activePage==='connect' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("connect")}>Connect With Us</button>
             <button class={`sidebar-button ${activePage==='events' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("events")}>Upcoming Events</button>
             <button class={`sidebar-button ${activePage==='eboard' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("eboard")}>Meet Our Executive Board</button>
-            <button class={`sidebar-button ${activePage==='gallery' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("gallery")}>Explore The Gallery</button>
+            <button class={`sidebar-button ${activePage==='album' ? 'sidebar-button-inactive' : 'sidebar-button-active'}`} onClick={() => handleActivePageChange("album")}>Explore The Gallery</button>
         </div>
     );
 }
