@@ -2,6 +2,7 @@ import homeContent from './home.json';
 import './Home.css';
 import Header from './../../components/header/Header.js';
 import HouseSlides from './components/HouseSlides.js';
+import { FaUser } from 'react-icons/fa';
 
 
 function WhoAreWeSection() {
@@ -34,7 +35,7 @@ function TheHouseSection() {
                 <h1>The House</h1>
             </div>
             <div id="house-slides">
-                <HouseSlides/>
+                <HouseSlides />
             </div>
             <div id="house-address">
                 <p>807 North State Street, Rolla, Missouri</p>
@@ -52,16 +53,31 @@ function TheHouseSection() {
 }
 
 function MembershipSection() {
+    let profileIcons = [];
+
+    const layers = Math.ceil(19 / 5);
+    for (let l = 0; l < layers; ++l) {
+        const icons = Math.min(5, 19 - (5 * l));
+        let profileIconRow = [];
+        for (let i = 0; i < icons; ++i) {
+            profileIconRow.push(<FaUser class="profile-icon" />);
+        }
+        profileIcons.push(<div class="profile-icon-row">{profileIconRow}</div>);
+    }
+
     return (
         <div id="member-section">
             <div id="member-header">
                 <h1>Membership</h1>
             </div>
-            <div id="member-graphic">
-                {/* COMING SOON */}
-            </div>
+
             <div id="member-count">
-                <p>X Active Members</p>
+                <div id="profile-icon-container">
+                    {profileIcons}
+                </div>
+                <div id="member-count-text">
+                    <p><span class="word-emphasis">19</span> Active Members</p>
+                </div>
             </div>
         </div>
     );
@@ -73,18 +89,18 @@ function LivingExpensesSection() {
             <div id="expense-header">
                 <h1>Living Expenses</h1>
             </div>
-            <div id="expense-semesterly">
-                <p>$X per semsters</p>
-            </div>
             <div id="expense-utilities">
+                <h2>Offered Utilities</h2>
                 <ul>
-                    <li>Cook</li>
-                    <li>Cafeteria</li>
-                    <li>Laundry</li>
-                    <li>Study Room</li>
-                    <li>Landing</li>
-                    <li>Parking</li>
+                    <li>Expert Full-time Chef Preparing Gourmet Lunch and Dinner Daily</li>
+                    <li>Modern Washers and Dryers for Convenient Laundry</li>
+                    <li>Quiet Study Room for Focused Learning and Research</li>
+                    <li>Entertainment Landing Featuring PS5 and Xbox One Consoles</li>
+                    <li>Spacious and Secure Parking Lot for Vehicles</li>
                 </ul>
+            </div>
+            <div id="expense-semesterly">
+                <p><span class="word-emphasis">$3500</span> per semester</p>
             </div>
         </div>
     );
@@ -95,9 +111,9 @@ function Home() {
         <div id="home-container">
             <Header>Missouri Mines Chapter</Header>
             <WhoAreWeSection />
-            <TheHouseSection/>
-             <MembershipSection/>
-             {/* <LivingExpensesSection/> */}
+            <TheHouseSection />
+            <MembershipSection />
+            <LivingExpensesSection />
         </div>
     );
 }

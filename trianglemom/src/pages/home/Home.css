@@ -64,3 +64,93 @@
     font-size: 1vw;
     padding: 5px;
 }
+
+/* --- Membership --- */
+
+#member-section {
+    width: 100%;
+    text-align: center;
+}
+
+#member-header>h1 {
+    font-size: 3vw;
+    color: var(--old-rose);
+}
+
+#member-count {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    width: 100%;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#profile-icon-container {
+  
+}
+
+.profile-icon-row {
+}
+
+.profile-icon {
+    font-size: 2vw;
+    color: var(--old-rose);
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+#member-count-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 2vw;
+    font-style: italic;
+}
+
+.word-emphasis {
+    color: var(--old-rose);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+/* --- Living Expense --- */
+
+#expense-section {
+    width: 100%;
+    text-align: center;
+}
+
+#expense-header>h1 {
+    font-size: 3vw;
+    color: var(--old-rose);
+}
+
+#expense-utilities {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#expense-utilities>h2 {
+    font-style: italic;
+    font-size: 2vw;
+}
+
+#expense-utilities>ul {
+    width: 80%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#expense-semesterly {
+    color: black;
+    font-size: 1.5vw;
+}
