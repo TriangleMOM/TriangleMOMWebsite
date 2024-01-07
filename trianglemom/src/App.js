@@ -12,7 +12,7 @@ import Navbar from './components/navbar/Navbar.js';
 const WIDTH_THRESHOLD = 1000;
 
 function App() {
-  const [activePage, setActivePage] = useState("album");
+  const [activePage, setActivePage] = useState("home");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleActivePageChange = (pageName) => {
