@@ -2,11 +2,12 @@ import './Connect.css'
 import React, { useState } from 'react';
 import Header from './../../components/header/Header.js';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import emailJSKeys from "./emailjs_keys.json";
 import emailjs from 'emailjs-com';
 
-const serviceID = "service_ovio4om";
-const templateID = "template_btu86jl";
-const userID = "o14l6Hfh9ZdWEJvSk";
+// const serviceID = "service_ovio4om";
+// const templateID = "template_btu86jl";
+// const userID = "o14l6Hfh9ZdWEJvSk";
 
 function filterPhoneCountryCode(cc) {
     const input = cc.replace(/\D/g, '').substring(0, 3);
@@ -190,13 +191,6 @@ function InputForm() {
     };
 
     const handleSubmit = () => {
-        console.log("Email: ", email);
-        console.log("CC: ", phoneCountryCode);
-        console.log("PN: ", phoneNumber);
-        console.log("Firstname: ", firstName);
-        console.log("Lastname: ", lastName);
-        console.log("Message: ", message);
-
         const templateParams = {
             firstName,
             lastName,
@@ -206,7 +200,11 @@ function InputForm() {
             message
         };
 
-        emailjs.send(serviceID, templateID, templateParams, userID)
+        emailjs.send(
+            emailJSKeys["SERVICE_ID"], 
+            emailJSKeys["TEMPLATE_ID"], 
+            templateParams, 
+            emailJSKeys["USER_ID"])
             .then(response => {
                 console.log('Email successfully sent!', response.status, response.text);
             }, err => {
