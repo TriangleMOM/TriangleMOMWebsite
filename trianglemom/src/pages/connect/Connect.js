@@ -5,10 +5,6 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import emailJSKeys from "./emailjs_keys.json";
 import emailjs from 'emailjs-com';
 
-// const serviceID = "service_ovio4om";
-// const templateID = "template_btu86jl";
-// const userID = "o14l6Hfh9ZdWEJvSk";
-
 function filterPhoneCountryCode(cc) {
     const input = cc.replace(/\D/g, '').substring(0, 3);
     let formattedInput = "+" + input;
@@ -190,6 +186,15 @@ function InputForm() {
         setPhoneNumber(filteredPhoneNumber);
     };
 
+    const resetFields = () => {
+        setEmail("");
+        setPhoneCountryCode("+1");
+        setPhoneNumber("");
+        setFirstName("");
+        setLastName("");
+        setMessage("");
+    }
+
     const handleSubmit = () => {
         const templateParams = {
             firstName,
@@ -210,6 +215,8 @@ function InputForm() {
             }, err => {
                 console.log('Failed to send email. Error:', err);
             });
+
+        resetFields();
     }
 
     return (

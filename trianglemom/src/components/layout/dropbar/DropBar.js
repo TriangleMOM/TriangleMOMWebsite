@@ -1,6 +1,7 @@
-import './Navbar.css';
+import './DropBar.css';
+import { Link } from "react-router-dom";
 
-function Navbar({ activePage, handleActivePageChange }) {
+function DropBar() {
     return (
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top m-0 p-0">
             <div class="container-fluid m-0 pb-2 pt-2" id="collapsible-navbar">
@@ -12,19 +13,19 @@ function Navbar({ activePage, handleActivePageChange }) {
                 <div class="collapse navbar-collapse" id="collapsibleContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-white" onClick={() => handleActivePageChange("home")}>Who We Are</a>
+                            <Link class="nav-link active text-white" to="/">Who We Are</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" onClick={() => handleActivePageChange("connect")}>Connect With Us</a>
+                            <Link class="nav-link active text-white" to="/connect">Connect With Us</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" onClick={() => handleActivePageChange("events")}>Upcoming Events</a>
+                            <Link class="nav-link active text-white" to="/events">Upcoming Events</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" onClick={() => handleActivePageChange("eboard")}>Meet Our Executive Board</a>
+                            <Link class="nav-link active text-white" to="/eboard">Meet Our Executive Board</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" onClick={() => handleActivePageChange("album")}>Explore The Gallery</a>
+                            <Link class="nav-link active text-white" to="/album">Explore The Gallery</Link>
                         </li>
                     </ul>
                 </div>
@@ -33,4 +34,4 @@ function Navbar({ activePage, handleActivePageChange }) {
     );
 }
 
-export default Navbar;
+export default DropBar;

@@ -1,0 +1,12 @@
+#layout-outlet {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+    #layout-outlet {
+      width: 100%;
+    }
+  }
