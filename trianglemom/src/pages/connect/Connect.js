@@ -47,6 +47,12 @@ function filterPhoneNumber(pnNew, pnOrig) {
     return formattedInput;
 }
 
+function filterName(name) {
+    let cleansedInput = name.replace(/[^a-zA-Z]/g, '');
+    cleansedInput = cleansedInput.charAt(0).toUpperCase() + cleansedInput.slice(1);
+    return cleansedInput;
+}
+
 function TypeOfContact({ toc, handleTypeContactChange }) {
     const [hovered, setHovered] = useState('none');
 
@@ -68,26 +74,27 @@ function TypeOfContact({ toc, handleTypeContactChange }) {
                 onMouseEnter={() => setHovered('email')}
                 onMouseLeave={() => setHovered('none')}
                 onClick={() => handleTypeContactChange('email')}
-                class="modern-button"
+                className="modern-button"
             ><FaEnvelope /></button>
             <button
                 style={buttonWidth('phone')}
                 onMouseEnter={() => setHovered('phone')}
                 onMouseLeave={() => setHovered('none')}
                 onClick={() => handleTypeContactChange('phone')}
-                class="modern-button"
+                className="modern-button"
             ><FaPhone /></button>
         </div>
     );
 }
 
-function EmailForm({ toc, handleEmailChange }) {
+function EmailForm({ toc, email, handleEmailChange }) {
     if (toc !== 'email') return (<></>);
 
     return (
-        <div class='contact-form' id='email-contact-form'>
+        <div className='contact-form' id='email-contact-form'>
             <input
                 type="text"
+                value={email}
                 placeholder='johndoe@email.com'
                 onChange={(e) => handleEmailChange(e.target.value)} />
         </div>
@@ -103,7 +110,7 @@ function PhoneForm({ toc,
     if (toc !== 'phone') return (<></>);
 
     return (
-        <div class='contact-form' id='phone-contact-form'>
+        <div className='contact-form' id='phone-contact-form'>
             <input
                 type="text"
                 id="phone-cc-input"
@@ -119,26 +126,31 @@ function PhoneForm({ toc,
     );
 }
 
-function NameForm({ handleFirstNameChange,
+function NameForm({ firstName,
+    lastName,
+    handleFirstNameChange,
     handleLastNameChange }) {
     return (
         <div id="name-form">
             <input
                 type="text"
+                value={firstName}
                 placeholder='First Name'
                 onChange={(e) => handleFirstNameChange(e.target.value)} />
             <input
                 type="text"
+                value={lastName}
                 placeholder='Last Name'
                 onChange={(e) => handleLastNameChange(e.target.value)} />
         </div>
     );
 }
 
-function MessageBodyForm({ handleMessageChange }) {
+function MessageBodyForm({ message, handleMessageChange }) {
     return (
         <div id='message-form'>
             <textarea
+                value={message}
                 onChange={(e) => handleMessageChange(e.target.value)}></textarea>
         </div>
     );
@@ -153,7 +165,7 @@ function SendButton({ handleSubmit }) {
 
     return (
         <div id="send-button">
-            <button class="modern-button"
+            <button className="modern-button"
                 onMouseEnter={() => setHovered(1)}
                 onMouseLeave={() => setHovered(0)}
                 style={buttonWidth()}
@@ -173,8 +185,6 @@ function InputForm() {
 
     const handleTypeContactChange = (type) => { setTypeContact(type); };
     const handleEmailChange = (address) => { setEmail(address); };
-    const handleFirstNameChange = (name) => { setFirstName(name); };
-    const handleLastNameChange = (name) => { setLastName(name); };
     const handleMessageChange = (message) => { setMessage(message); };
 
     const handlePhoneCountryCodeChange = (cc) => {
@@ -186,6 +196,16 @@ function InputForm() {
         setPhoneNumber(filteredPhoneNumber);
     };
 
+    const handleFirstNameChange = (name) => {
+        const filteredName = filterName(name);
+        setFirstName(filteredName);
+    };
+
+    const handleLastNameChange = (name) => {
+        const filteredName = filterName(name);
+        setLastName(filteredName);
+    };
+
     const resetFields = () => {
         setEmail("");
         setPhoneCountryCode("+1");
@@ -193,6 +213,32 @@ function InputForm() {
         setFirstName("");
         setLastName("");
         setMessage("");
+    }
+
+    const verifyFields = () => {
+        if(typeContact == "none") {
+            return false;
+        }
+        
+        if(typeContact == "email") {
+            if(!email.includes('@') || !email.includes('.') || email.length < 5) {
+                return false;
+            }
+        } else {
+            if(phoneCountryCode.length === 1 || phoneNumber.length !== 14) {
+                return false;
+            }
+        }
+        
+        if(!firstName.length || !lastName.length) {
+            return false;
+        }
+
+        if(!message.length) {
+            return false;
+        }
+
+        return true;
     }
 
     const handleSubmit = () => {
@@ -205,10 +251,12 @@ function InputForm() {
             message
         };
 
+        if(!verifyFields()) return;
+
         emailjs.send(
-            emailJSKeys["SERVICE_ID"], 
-            emailJSKeys["TEMPLATE_ID"], 
-            templateParams, 
+            emailJSKeys["SERVICE_ID"],
+            emailJSKeys["TEMPLATE_ID"],
+            templateParams,
             emailJSKeys["USER_ID"])
             .then(response => {
                 console.log('Email successfully sent!', response.status, response.text);
@@ -226,6 +274,7 @@ function InputForm() {
                 handleTypeContactChange={handleTypeContactChange} />
             <EmailForm
                 toc={typeContact}
+                email={email}
                 handleEmailChange={handleEmailChange} />
             <PhoneForm
                 toc={typeContact}
@@ -234,9 +283,12 @@ function InputForm() {
                 handlePhoneCountryCodeChange={handlePhoneCountryCodeChange}
                 handlePhoneNumberChange={handlePhoneNumberChange} />
             <NameForm
+                firstName={firstName}
+                lastName={lastName}
                 handleFirstNameChange={handleFirstNameChange}
                 handleLastNameChange={handleLastNameChange} />
             <MessageBodyForm
+                message={message}
                 handleMessageChange={handleMessageChange} />
             <SendButton handleSubmit={handleSubmit} />
         </div>

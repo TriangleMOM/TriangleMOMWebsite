@@ -3,15 +3,15 @@ import './Events.css';
 
 function EventCard() {
     return(
-    <div class="event-card card">
-        <div class="event-date card-header">
+    <div className="event-card card">
+        <div className="event-date card-header">
             December 12th, 2023
         </div>
-        <div class="event-details card-body">
-            <p class="event-title h1">Winter Break</p>
-            <p class="event-time h6">Friday, 6-8pm</p>
-            <p class="event-location h6">1701 Ashwood Drive, Rolla MO</p>
-            <p class="event-type">Recruitment Event</p>
+        <div className="event-details card-body">
+            <p className="event-title h1">Winter Break</p>
+            <p className="event-time h6">Friday, 6-8pm</p>
+            <p className="event-location h6">1701 Ashwood Drive, Rolla MO</p>
+            <p className="event-type">Recruitment Event</p>
         </div>
     </div>
     );
@@ -33,7 +33,7 @@ function ScrollableEvents() {
 function Events() {
     return (
         <div id="event-container">
-            <Header>Upcoming Events.</Header>
+            <Header>Upcoming Events</Header>
             <ScrollableEvents/>
         </div>
     );

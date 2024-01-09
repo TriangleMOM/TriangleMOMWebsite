@@ -3,16 +3,16 @@ import Header from './../../components/header/Header.js';
 
 function Profile() {
     return (
-        <div class="profile">
-            <div class='profile-image'>
+        <div className="profile">
+            <div className='profile-image'>
                 <img src="./images/profilepic.jpg"/>
             </div>
-            <div class='profile-info'>
-                <h2 class="profile-name">Jason Pittman</h2>
-                <h3 class="profile-position">Recruitment Chair</h3>
-                <p class='profile-hometown'>My hometown is Grain Valley, Missouri</p>
-                <p class='profile-major'>Majoring in Computer Science & Mathematics</p>
-                <p class='profile-quote'>"I joined triangle to become part of a family where I'm dad"</p>
+            <div className='profile-info'>
+                <h2 className="profile-name">Jason Pittman</h2>
+                <h3 className="profile-position">Recruitment Chair</h3>
+                <p className='profile-hometown'>My hometown is Grain Valley, Missouri</p>
+                <p className='profile-major'>Majoring in Computer Science & Mathematics</p>
+                <p className='profile-quote'>"I joined triangle to become part of a family where I'm dad"</p>
             </div>
         </div>
     );
@@ -20,8 +20,8 @@ function Profile() {
 
 function Redbar() {
     return (
-        <div class="redbar-container">
-            <div class="redbar"></div>
+        <div className="redbar-container">
+            <div className="redbar"></div>
         </div>
     );
 }

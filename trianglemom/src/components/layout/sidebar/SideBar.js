@@ -16,11 +16,11 @@ function SideBarHeader() {
 function SideBarButtonContainer() {
     return (
         <div id="sidebar-button-container">
-            <Link class="sidebar-button" to="/">Who We Are</Link>
-            <Link class="sidebar-button" to="/connect">Connect With Us</Link>
-            <Link class="sidebar-button" to="/events">Upcoming Events</Link>
-            <Link class="sidebar-button" to="/eboard">Meet Our Executive Board</Link>
-            <Link class="sidebar-button" to="/album">Explore The Gallery</Link>
+            <Link className="sidebar-button" to="/">Who We Are</Link>
+            <Link className="sidebar-button" to="/connect">Connect With Us</Link>
+            <Link className="sidebar-button" to="/events">Upcoming Events</Link>
+            <Link className="sidebar-button" to="/eboard">Meet Our Executive Board</Link>
+            <Link className="sidebar-button" to="/album">Explore The Gallery</Link>
         </div>
     );
 }
