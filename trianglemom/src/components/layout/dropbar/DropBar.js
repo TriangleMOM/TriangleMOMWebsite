@@ -1,36 +1,49 @@
 import './DropBar.css';
 import { Link } from "react-router-dom";
+import { useState, useEffect, useCallback } from 'react';
+import { Collapse } from 'bootstrap';
 
 function DropBar() {
+    var [toggle, setToggle] = useState(false);
+
+    useEffect(() => {
+        const collapsibleContent = document.getElementById("collapsibleContent");
+        const bsCollapse = new Collapse(collapsibleContent, {toggle:false});
+        toggle ? bsCollapse.show() : bsCollapse.hide();
+    });
+
     return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top m-0 p-0">
-            <div class="container-fluid m-0 pb-2 pt-2" id="collapsible-navbar">
-                <a class="navbar-brand">Triangle MOM</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleContent">
-                    <span class="navbar-toggler-icon navbar-dark"></span>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top m-0 p-0">
+            <div className="container-fluid m-0 pb-2 pt-2" id="collapsible-navbar">
+                <a className="navbar-brand">Triangle MOM</a>
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    onClick={() => setToggle(!toggle)}>
+                    <span className="navbar-toggler-icon navbar-dark"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="collapsibleContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <Link class="nav-link active text-white" to="/">Who We Are</Link>
+                <div className="collapse navbar-collapse" id="collapsibleContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item" onClick={() => setToggle(!toggle)}>
+                            <Link className="nav-link active text-white" to="/">Who We Are</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active text-white" to="/connect">Connect With Us</Link>
+                        <li className="nav-item" onClick={() => setToggle(!toggle)}>
+                            <Link className="nav-link active text-white" to="/connect" data>Connect With Us</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active text-white" to="/events">Upcoming Events</Link>
+                        <li className="nav-item" onClick={() => setToggle(!toggle)}>
+                            <Link className="nav-link active text-white" to="/events">Upcoming Events</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active text-white" to="/eboard">Meet Our Executive Board</Link>
+                        <li className="nav-item" onClick={() => setToggle(!toggle)}>
+                            <Link className="nav-link active text-white" to="/eboard">Meet Our Executive Board</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link active text-white" to="/album">Explore The Gallery</Link>
+                        <li className="nav-item" onClick={() => setToggle(!toggle)}>
+                            <Link className="nav-link active text-white" to="/album">Explore The Gallery</Link>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 }
 
