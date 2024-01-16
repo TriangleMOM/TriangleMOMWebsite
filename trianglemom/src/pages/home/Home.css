@@ -33,6 +33,12 @@
     font-size: 0.9vw;
 }
 
+@media (max-width: 1000px) {
+    .waw-para {
+        font-size: 2.5vw;
+    }
+}
+
 /* --- The House --- */
 
 #house-section {
@@ -65,6 +71,20 @@
     padding: 5px;
 }
 
+@media (max-width: 1000px) {
+    #house-header>h1 {
+        font-size: 8vw;
+    }
+
+    #house-address {
+        font-size: 2vw;
+    }
+
+    #house-details>ul>li {
+        font-size: 2.5vw;
+    }
+}
+
 /* --- Membership --- */
 
 #member-section {
@@ -88,12 +108,9 @@
     margin-bottom: 30px;
 }
 
-#profile-icon-container {
-  
-}
+#profile-icon-container {}
 
-.profile-icon-row {
-}
+.profile-icon-row {}
 
 .profile-icon {
     font-size: 2vw;
@@ -116,6 +133,24 @@
     font-style: normal;
     font-weight: bold;
     font-size: 4vw;
+}
+
+@media (max-width: 1000px) {
+    #member-header>h1 {
+        font-size: 8vw;
+    }
+
+    .profile-icon {
+        font-size: 4vw;
+    }
+
+    #member-count-text {
+        font-size: 4vw;
+    }
+
+    .word-emphasis {
+        font-size: 15vw;
+    }
 }
 
 /* --- Living Expense --- */
@@ -153,4 +188,23 @@
 #expense-semesterly {
     color: black;
     font-size: 1.5vw;
+}
+
+@media (max-width: 1000px) {
+    #expense-header>h1 {
+        font-size: 8vw;
+    }
+
+    #expense-utilities>h2 {
+        font-size: 4vw;
+    }
+
+    #expense-semesterly {
+        font-size: 4vw;
+    }
+
+
+    #expense-utilities>ul {
+        font-size: 2.5vw;
+    }
 }

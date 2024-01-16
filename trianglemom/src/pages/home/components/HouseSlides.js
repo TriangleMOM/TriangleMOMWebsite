@@ -26,8 +26,8 @@ const HouseSlides = () => {
         <div className="slide-container">
             <Slide>
                 {images.map((slideImage, index) => (
-                    <div key={index}>
-                        <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage})` }}>
+                    <div  class="slide-image-cont" key={index}>
+                        <div  class="slide-image" style={{ ...divStyle, 'backgroundImage': `url(${slideImage})` }}>
                         </div>
                     </div>
                 ))}
