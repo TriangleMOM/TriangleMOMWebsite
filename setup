@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+cd trianglemom/src/pages/connect
+touch emailjs_keys.json
+
+read -p "EmailJS Service ID: " SERVICE_ID
+read -p "EmailJS Template ID: " TEMPLATE_ID
+read -p "EmailJS User ID: " USER_ID
+
+SERVICE_ID="\t\"SERVICE_ID\":\"${SERVICE_ID}\","
+TEMPLATE_ID="\t\"TEMPLATE_ID\":\"${TEMPLATE_ID}\","
+USER_ID="\t\"USER_ID\":\"${USER_ID}\""
+
+echo -e "{\n${SERVICE_ID}\n${TEMPLATE_ID}\n${USER_ID}\n}" > emailjs_keys.json
