@@ -28,13 +28,15 @@ function Redbar() {
 }
 
 function Eboard() {
-    let members = [];
-    EboardMembers["members"].map((member, index) => {
-        members.push(<Profile member={member}/>);
-        if(index < EboardMembers["members"].length-1) {
-             members.push(<Redbar/>);
-        }
+    let members = EboardMembers["members"].map((member, index) => {
+        return (
+            <>
+                <Profile member={member} />
+                {index < EboardMembers["members"].length - 1 && <Redbar />}
+            </>
+        );
     });
+    
 
     return (
         <div id="eboard-container">
