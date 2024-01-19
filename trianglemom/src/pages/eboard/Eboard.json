@@ -6,7 +6,7 @@
             "hometown": "..., Missouri",
             "major": "...",
             "quote": "Triangle is not a frat house, it’s a frat home.",
-            "profilepic": "president.jpg"
+            "profilepic": "nico.jpg"
         },
         {
             "name": "Garrek McCune",
@@ -14,39 +14,7 @@
             "hometown": "Carthage, Missouri",
             "major": "Aerospace Engineering",
             "quote": "...",
-            "profilepic": "president.jpg"
-        },
-        {
-            "name": "Matthew Moore",
-            "role": "Member Education Chair",
-            "hometown": "..., Missouri",
-            "major": "Computer Science",
-            "quote": "...",
-            "profilepic": "president.jpg"
-        },
-        {
-            "name": "David Truong",
-            "role": "... Chair",
-            "hometown": "..., Missouri",
-            "major": "Engineering Management",
-            "quote": "...",
-            "profilepic": "president.jpg"
-        },   
-        {
-            "name": "James Onanion",
-            "role": "Philanthropy Chair",
-            "hometown": "..., Missouri",
-            "major": "Computer Science",
-            "quote": "...",
-            "profilepic": "president.jpg"
-        },
-        {
-            "name": "Sebastion Ubinger",
-            "role": "...",
-            "hometown": "..., Missouri",
-            "major": "Aerospace Engineering",
-            "quote": "",
-            "profilepic": "president.jpg"
+            "profilepic": "garrek.jpg"
         },
         {
             "name": "Jason Pittman",
@@ -54,6 +22,38 @@
             "hometown": "Grain Valley, Missouri",
             "major": "Computer Science & Mathematics",
             "quote": "...",
+            "profilepic": "jason.jpg"
+        },
+        {
+            "name": "Matthew Moore",
+            "role": "Member Education Chair",
+            "hometown": "..., Missouri",
+            "major": "Computer Science",
+            "quote": "...",
+            "profilepic": "matthew.jpg"
+        },
+        {
+            "name": "David Truong",
+            "role": "Scholarship Chair",
+            "hometown": "..., Missouri",
+            "major": "Engineering Management",
+            "quote": "...",
+            "profilepic": "david.jpg"
+        },   
+        {
+            "name": "James Onanion",
+            "role": "Philanthropy Chair",
+            "hometown": "..., Missouri",
+            "major": "Computer Science",
+            "quote": "...",
+            "profilepic": "james.jpg"
+        },
+        {
+            "name": "Sebastion Ubinger",
+            "role": "...",
+            "hometown": "..., Missouri",
+            "major": "Aerospace Engineering",
+            "quote": "",
             "profilepic": "president.jpg"
         }
     ]
