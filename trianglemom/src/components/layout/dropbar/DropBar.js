@@ -1,6 +1,6 @@
 import './DropBar.css';
 import { Link } from "react-router-dom";
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Collapse } from 'bootstrap';
 
 function DropBar() {
@@ -15,7 +15,7 @@ function DropBar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top m-0 p-0">
             <div className="container-fluid m-0 pb-2 pt-2" id="collapsible-navbar">
-                <a className="navbar-brand">Triangle MOM</a>
+                <a className="navbar-brand" href="/">Triangle MOM</a>
                 <button
                     className="navbar-toggler"
                     type="button"

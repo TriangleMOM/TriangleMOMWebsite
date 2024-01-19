@@ -20,7 +20,7 @@ function EventCard() {
 function ScrollableEvents() {
     let events = []
     for(var i = 0; i < 20; i++) {
-        events.push(<EventCard/>);
+        events.push(<EventCard key={`event-card-${i}`}/>);
     }
 
     return (

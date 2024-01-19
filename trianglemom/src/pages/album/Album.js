@@ -1,7 +1,6 @@
-// import LightGallery from 'lightgallery/react';
 import Header from '../../components/header/Header.js';
+import PhotoAlbum from 'react-photo-album';
 import './Album.css';
-import Gallery from 'react-photo-gallery';
 
 const images = [
     { src: "./images/dog1.jpg", width: 1, height: 1 },
@@ -20,7 +19,7 @@ function Album() {
     return (
         <div id="gallery-container">
             <Header>Explore The Gallery</Header>
-            <Gallery photos={images}/>
+            <PhotoAlbum photos={images} layout="masonry"/>
         </div>
     );
 }

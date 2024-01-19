@@ -8,9 +8,9 @@ import { FaUser } from 'react-icons/fa';
 function WhoAreWeSection() {
     // Extract parapgraph content from home.json
     const paragraphs = [];
-    homeContent["paragraphs"].forEach((item) => {
+    homeContent["paragraphs"].forEach((item, index) => {
         paragraphs.push(
-            <div class="waw-para">
+            <div className="waw-para" key={`waw-para-${index}`}>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;{item}</p>
             </div>
         );
@@ -19,7 +19,7 @@ function WhoAreWeSection() {
     return (
         <div id="waw-section">
             <div id="waw-image">
-                <img src="images/outside/front_landscape.jpg" />
+                <img alt="front-landscape" src="images/outside/front_landscape.jpg" />
             </div>
             <div id="waw-para-section">
                 {paragraphs}
@@ -60,9 +60,9 @@ function MembershipSection() {
         const icons = Math.min(5, 19 - (5 * l));
         let profileIconRow = [];
         for (let i = 0; i < icons; ++i) {
-            profileIconRow.push(<FaUser class="profile-icon" />);
+            profileIconRow.push(<FaUser className="profile-icon" key={`profile-icon-${l}-${i}`} />);
         }
-        profileIcons.push(<div class="profile-icon-row">{profileIconRow}</div>);
+        profileIcons.push(<div className="profile-icon-row"  key={`profile-icon-row-${l}`}>{profileIconRow}</div>);
     }
 
     return (
@@ -76,7 +76,7 @@ function MembershipSection() {
                     {profileIcons}
                 </div>
                 <div id="member-count-text">
-                    <p><span class="word-emphasis">19</span> Active Members</p>
+                    <p><span className="word-emphasis">19</span> Active Members</p>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@ function LivingExpensesSection() {
                 </ul>
             </div>
             <div id="expense-semesterly">
-                <p><span class="word-emphasis">$3500</span> per semester</p>
+                <p><span className="word-emphasis">$3500</span> per semester</p>
             </div>
         </div>
     );

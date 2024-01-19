@@ -6,7 +6,6 @@ import Events from './pages/events/Events.js';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import { useEffect } from "react";
 
 import Layout from "./components/layout/Layout";
 

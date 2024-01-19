@@ -216,11 +216,11 @@ function InputForm() {
     }
 
     const verifyFields = () => {
-        if(typeContact == "none") {
+        if(typeContact === "none") {
             return false;
         }
         
-        if(typeContact == "email") {
+        if(typeContact === "email") {
             if(!email.includes('@') || !email.includes('.') || email.length < 5) {
                 return false;
             }
@@ -260,11 +260,11 @@ function InputForm() {
             emailJSKeys["USER_ID"])
             .then(response => {
                 console.log('Email successfully sent!', response.status, response.text);
+                resetFields();
+                window.location.href = "/";
             }, err => {
                 console.log('Failed to send email. Error:', err);
             });
-
-        resetFields();
     }
 
     return (

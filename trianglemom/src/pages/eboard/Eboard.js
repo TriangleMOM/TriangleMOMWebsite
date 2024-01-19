@@ -5,7 +5,7 @@ function Profile() {
     return (
         <div className="profile">
             <div className='profile-image'>
-                <img src="./images/profilepic.jpg"/>
+                <img src="./images/profilepic.jpg" alt="profleimage"/>
             </div>
             <div className='profile-info'>
                 <h2 className="profile-name">Jason Pittman</h2>
