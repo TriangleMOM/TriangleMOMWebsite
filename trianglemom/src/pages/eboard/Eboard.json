@@ -1,0 +1,20 @@
+{
+    "members": [
+        {
+            "name": "Jason Pittman",
+            "role": "Recruitment Chair",
+            "hometown": "Grain Valley, Missouri",
+            "major": "Computer Science & Mathematics",
+            "quote": "I joined triangle to become part of a family where I'm dad",
+            "profilepic": "president.jpg"
+        },
+        {
+            "name": "Chad Pittman",
+            "role": "President",
+            "hometown": "Grain Valley, Missouri",
+            "major": "Computer Science & Mathematics",
+            "quote": "I joined triangle to become part of a family where I'm dad",
+            "profilepic": "president.jpg"
+        }
+    ]
+}
