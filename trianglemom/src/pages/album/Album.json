@@ -1,0 +1,79 @@
+{
+    "images": [
+        {
+            "src": "./images/album/dog1.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog2.jpg",
+            "width": 1,
+            "height": 2
+        },
+        {
+            "src": "./images/album/dog3.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog4.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog5.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog6.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog7.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog8.jpg",
+            "width": 1,
+            "height": 2
+        },
+        {
+            "src": "./images/album/dog9.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/dog10.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/sample1.jpeg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/profilepic.jpg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/house.jpeg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/sample3.jpeg",
+            "width": 1,
+            "height": 1
+        },
+        {
+            "src": "./images/album/sample2.jpeg",
+            "width": 1,
+            "height": 1
+        }
+    ]
+}
