@@ -1,0 +1,40 @@
+{
+    "events": [
+        {
+            "day": "13th",
+            "month": "April",
+            "year": "2024",
+            "time": "Saturday 8am-8pm",
+            "name": "Alumni Workday",
+            "address": "1701 Ashwood Drive, Rolla MO",
+            "type": "Alumni Event"
+        },
+        {
+            "day": "13th",
+            "month": "April",
+            "year": "2024",
+            "time": "Saturday 8am-12pm",
+            "name": "A&R Day",
+            "address": "1346 N Bishop Ave, Rolla MO",
+            "type": "Recruitment Event"
+        },
+        {
+            "day": "20th",
+            "month": "April",
+            "year": "2024",
+            "time": "Saturday 8pm-12am",
+            "name": "Anime Watch Party",
+            "address": "1701 Ashwood Drive, Rolla MO",
+            "type": "Recruitment Event"
+        },
+        {
+            "day": "27th",
+            "month": "April",
+            "year": "2024",
+            "time": "Saturday 8am-12pm",
+            "name": "A&R Day",
+            "address": "1346 N Bishop Ave, Rolla MO",
+            "type": "Recruitment Event"
+        }
+    ]
+}

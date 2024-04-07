@@ -1,27 +1,32 @@
 import Header from './../../components/header/Header.js';
 import './Events.css';
+import EventList from './Events.json';
 
-function EventCard() {
-    return(
+
+function EventCard({ event }) {
+        return(
     <div className="event-card card">
         <div className="event-date card-header">
-            December 12th, 2023
+            {event.month} {event.day}, {event.year}
         </div>
         <div className="event-details card-body">
-            <p className="event-title h1">Winter Break</p>
-            <p className="event-time h6">Friday, 6-8pm</p>
-            <p className="event-location h6">1701 Ashwood Drive, Rolla MO</p>
-            <p className="event-type">Recruitment Event</p>
+            <p className="event-title h1">{event.name}</p>
+            <p className="event-time h6">{event.time}</p>
+            <p className="event-location h6">{event.address}</p>
+            <p className="event-type">{event.type}</p>
         </div>
     </div>
     );
 }
 
 function ScrollableEvents() {
-    let events = []
-    for(var i = 0; i < 20; i++) {
-        events.push(<EventCard key={`event-card-${i}`}/>);
-    }
+    let events = EventList["events"].map((e, i) => {
+        return (
+            <>
+                <EventCard event={e} />
+            </>
+        );
+    });
 
     return (
         <div data-bs-spy="scroll" id="event-scroll-container">
