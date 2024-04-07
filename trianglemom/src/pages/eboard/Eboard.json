@@ -3,17 +3,17 @@
         {
             "name": "Nicolas Rivera",
             "role": "President",
-            "hometown": "..., Missouri",
-            "major": "...",
+            "hometown": "St. Charles, Missouri",
+            "major": "Chemistry",
             "quote": "Triangle is not a frat house, it’s a frat home.",
             "profilepic": "nico.jpg"
         },
         {
             "name": "Garrek McCune",
-            "role": "Treasurer & VP",
+            "role": "Treasurer & Vice President",
             "hometown": "Carthage, Missouri",
             "major": "Aerospace Engineering",
-            "quote": "...",
+            "quote": "",
             "profilepic": "garrek.jpg"
         },
         {
@@ -27,34 +27,34 @@
         {
             "name": "Matthew Moore",
             "role": "Member Education Chair",
-            "hometown": "..., Missouri",
+            "hometown": "St. Louis, Missouri",
             "major": "Computer Science",
-            "quote": "...",
+            "quote": "I had no desire or intention to join a frat until I met the boys.",
             "profilepic": "matthew.jpg"
         },
         {
             "name": "David Truong",
             "role": "Scholarship Chair",
-            "hometown": "..., Missouri",
+            "hometown": "Imperial, Missouri",
             "major": "Engineering Management",
-            "quote": "...",
+            "quote": "Help build better men by character and academically.",
             "profilepic": "david.jpg"
         },   
         {
             "name": "James Onanion",
             "role": "Philanthropy Chair",
-            "hometown": "..., Missouri",
+            "hometown": "House Springs, Missouri",
             "major": "Computer Science",
             "quote": "...",
             "profilepic": "james.jpg"
         },
         {
             "name": "Sebastion Ubinger",
-            "role": "...",
-            "hometown": "..., Missouri",
+            "role": "House Maintenance Chair",
+            "hometown": "Edwardsville, Kansas",
             "major": "Aerospace Engineering",
-            "quote": "",
-            "profilepic": "president.jpg"
+            "quote": "...",
+            "profilepic": "sebastion.jpg"
         }
     ]
 }

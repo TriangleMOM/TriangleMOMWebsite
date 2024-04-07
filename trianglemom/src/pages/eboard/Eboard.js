@@ -13,7 +13,7 @@ function Profile({ member }) {
                 <h3 className="profile-position">{member.role}</h3>
                 <p className='profile-hometown'>My hometown is {member.hometown}</p>
                 <p className='profile-major'>Majoring in {member.major}</p>
-                <p className='profile-quote'>"{member.quote}"</p>
+                {/* <p className='profile-quote'>"{member.quote}"</p> */}
             </div>
         </div>
     );
